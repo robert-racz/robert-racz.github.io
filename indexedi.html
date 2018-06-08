@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>City of Edinburgh</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styleedi.css"	>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+        $(".kepes").mouseenter(function(){
+            $(this).find(".kepkep").css({
+                "opacity": "0.8",
+                "font-size": "115px",
+				"color": "black"
+            });
+	    });
+	    $(".kepes").mouseleave(function(){
+		    $(this).find(".kepkep").css({
+                "opacity": "1",
+                "font-size": "100px",
+				"color": "#b75b0b"
+            });
+        });
+		
+        $(window).scroll( function(){
+            $('.hideme').each( function(i){    
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if( bottom_of_window > bottom_of_object ){
+                    $(this).animate({'opacity':'1'},800);                
+                }
+            }); 
+    
+        });
+    });
+    </script>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-left column middle">
+    <ul>
+	  <li><i class="fa fa-phone"></i> 01234567890</li>
+	  <li><i class="fa fa-envelope"></i> info@mail.com</li>
+	</ul>
+  </div>
+  <div class="header-right column middle">
+    <ul>
+	  <li><a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram" style="color:rgb(183, 91, 11);font-size:24px"></i></a></li>
+	  <li><a href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube" style="color:rgb(183, 91, 11);font-size:24px"></i></a></li>
+	  <li><a href="http://www.pinterest.com" target="_blank"><i class="fa fa-pinterest" style="color:rgb(183, 91, 11);font-size:24px"></i></a></li>
+	  <li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter" style="color:rgb(183, 91, 11);font-size:24px"></i></a></li>
+	  <li><a href="http://www.plus.google.com" target="_blank"><i class="fa fa-google-plus-official" style="color:rgb(183, 91, 11);font-size:24px"></i></a></li>
+	  <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook-official" style="color:rgb(183, 91, 11);font-size:24px"></i></a></li>
+	</ul>
+  </div>
+  <div class="clearfix"></div>  
+</div>
+
+<div class="topnav" id="tnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction2()};
+
+var navbar = document.getElementById("tnav");
+var sticky = navbar.offsetTop;
+
+function myFunction2() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+function myFunction() {
+    var x = document.getElementById("tnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<div class="container">
+  <div class="topkep">
+    <div class="focim">  
+      <p>City of <span class="narancs"><b>EDINBURGH</b></span></p>
+    </div>
+    <div class="focim2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="focima">
+      <a href="#">Read More</a>
+    </div>
+  </div>
+</div>
+
+<div class="bekezdes1">
+  <div class="column middle">
+    <div class="shadrad">
+	  <h1 class="narancs"><u>HOME</u></h1>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+  </div>
+  <div class="column middle">
+  
+  <div class="slidergallery">
+    <div class="containergallery">
+      <div class="mySlides">
+        <img src="img/church4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="img/deanb4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="img/arthur4.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <img src="img/deanpath4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="img/devin4.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <img src="img/portobello4.jpg" style="width:100%">
+      </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+    </div>
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+  <div class="clearfix"></div>
+  </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+
+<div class="bekezdes2 hideme">
+  <h1 class="narancs"><u>The CITY</u></h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+</div>  
+ 
+<div class="row1">
+  <div class="column harmad kepes">
+    <a id="asd" href="#" target="_blank"><i class="kepkep fa fa-bank" style="color:rgb(183, 91, 11);font-size:100px"></i></a>
+	<h2 class="szurke">Business</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies</p>
+  </div>
+  <div class="column harmad kepes">
+    <a href="#" target="_blank"><i class="kepkep fa fa-cogs" style="color:rgb(183, 91, 11);font-size:100px"></i></a>
+	<h2 class="szurke">Features</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies</p>
+  </div>
+  <div class="column harmad kepes">
+    <a href="#" target="_blank"><i class="kepkep fa fa-bar-chart" style="color:rgb(183, 91, 11);font-size:100px"></i></a>
+	<h2 class="szurke">Marketing</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies</p>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+
+<div class="row2">
+  <div class="column harmad kepes">
+    <a href="#" target="_blank"><i class="kepkep fa fa-comments-o" style="color:rgb(183, 91, 11);font-size:100px"></i></a>
+	<h2 class="szurke">Support</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies</p>
+  </div>
+  <div class="column harmad kepes">
+    <a href="#" target="_blank"><i class="kepkep fa fa-user-circle" style="color:rgb(183, 91, 11);font-size:100px"></i></a>
+	<h2 class="szurke">Users</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies</p>
+  </div>
+  <div class="column harmad kepes">
+    <a href="#" target="_blank"><i class="kepkep fa fa-gbp" style="color:rgb(183, 91, 11);font-size:100px"></i></a>
+	<h2 class="szurke">Invest</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies</p>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+
+<div class="bekezdes3 hideme">
+  <div class="column big">
+    <h2>EDINBURGH ONE OF THE MOST INCREDIBLE CITIES IN THE WORLD</h2>  
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies</p>
+  </div>
+  <div class="column side">
+    <a class="gomb1" href="#">More Info</a>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+
+<section class="about"> 
+  <div class="about-title narancs"> 
+    <h2>About Us</h2>
+  </div> 								
+  <div class="about-content">
+    <div class="column middle about-col1">
+      <img src="img/edicol.jpg" alt="Edinburgh College" style="max-width:100%; border-radius:50%; padding:10px">
+    </div>
+    <div class="column middle shadrad" style="margin-top:15px">
+      <h4>EDINBURGH COLLEGE</h4>
+	  <p>Lorem ipsum dolor sit amet, dicunt complectitur consectetuer in ius, vis ne meis admodum deserunt. In augue iudico intellegebat ius, vero corpora disputationi vel in.&nbsp; dicunt complectitur consectetuer in ius, vis ne meis admodum deserunt. In augue iudico intellegebat ius, vero corpora disputationi vel in.orpora disputaLorem ipsum dolor sit amet, dicunt complectitur consectetuer in ius, vis ne meis admodum deserunt. In augue iudico intellegebat ius, vero corpora disputationi vis n legebat iussputationi vel in.</p>
+      <a class="gomb1" href="#">More Info</a>
+    </div>
+  </div> 
+  <div class="clearfix"></div>
+</section>
+
+<section class="blog">
+  <div class="blog-head">
+    <h4 class="narancs">BLOG</h4>
+  </div>
+  
+  <div class="blog-res">
+    <div class="blog-gal">
+      <div class="kepd">
+	    <a target="_blank" href="img/edistreet.jpg">
+          <img src="img/edistreet.jpg" alt="Edinburgh Street" width="100%" height="300">
+        </a>
+	    <div class="dateb">
+	      <p><i class="fa fa-calendar"></i> May 16, 2018</p>
+	    </div>
+	  <div class="clearfix"></div>
+	  </div>
+      <div class="desc">
+	    <h2>Edinburgh Street</h2>
+	    <p>Lorem ipsum dolor sit amet, dicunt complectitur consectetuer in ius, vis ne meis admodum deserunt.</p>
+	    <a class="gomb1" href="#">Read More</a>
+	  </div>
+    </div>
+  </div>
+
+  <div class="blog-res">
+    <div class="blog-gal">
+	  <div class="kepd">
+        <a target="_blank" href="img/edidean.jpg">
+          <img src="img/edidean.jpg" alt="Edinburgh Dean Village" width="100%" height="300">
+        </a>
+		<div class="dateb">
+	      <p><i class="fa fa-calendar"></i> May 02, 2018</p>
+	    </div>
+	  <div class="clearfix"></div>
+	  </div>
+      <div class="desc">
+	    <h2>Edinburgh Dean Village</h2>
+	    <p>Lorem ipsum dolor sit amet, dicunt complectitur consectetuer in ius, vis ne meis admodum deserunt.</p>
+	    <a class="gomb1" href="#">Read More</a>
+	  </div>
+    </div>
+  </div>
+
+  <div class="blog-res">
+    <div class="blog-gal">
+	  <div class="kepd">
+        <a target="_blank" href="img/edigate.jpg">
+          <img src="img/edigate.jpg" alt="Edinburgh Castle" width="100%" height="300">
+        </a>
+		<div class="dateb">
+	      <p><i class="fa fa-calendar"></i> April 24, 2018</p>
+	    </div>
+	  <div class="clearfix"></div>
+	  </div>
+      <div class="desc">
+	    <h2>Edinburgh Castle</h2>
+	    <p>Lorem ipsum dolor sit amet, dicunt complectitur consectetuer in ius, vis ne meis admodum deserunt.</p>
+        <a class="gomb1" href="#">Read More</a>	 
+	 </div>
+    </div>
+  </div>
+
+  <div class="blog-res">
+    <div class="blog-gal">
+	  <div class="kepd">
+        <a target="_blank" href="img/edimin.jpg">
+          <img src="img/edimin.jpg" alt="Edinburgh Dean Bridge" width="100%" height="300">
+        </a>
+		<div class="dateb">
+	      <p><i class="fa fa-calendar"></i> April 17, 2018</p>
+	    </div>
+	  <div class="clearfix"></div>
+	  </div>
+      <div class="desc">
+	    <h2>Edinburgh Dean Bridge</h2>
+	    <p>Lorem ipsum dolor sit amet, dicunt complectitur consectetuer in ius, vis ne meis admodum deserunt.</p>
+	    <a class="gomb1" href="#">Read More</a>
+	  </div>
+    </div>
+  </div>
+
+<div class="clearfix"></div>
+</section>
+
+<section class="last">
+  
+  <div class="column middle" style="padding:0">
+    <div class="mapmap">
+      <div id="map" style="width:100%;height:450px"></div>
+        <script>
+            function initMap() {
+                var edinburgh = {lat: 55.953251, lng: -3.188267};
+                var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 11, center: edinburgh});
+                var marker = new google.maps.Marker({position: edinburgh, map: map});
+            }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABpCA8OXXOoUBwg8diTUIF3QvGFwEbIpE&callback=initMap">
+        </script>
+    </div>
+  </div>
+  
+  <div class="column middle" style="padding:0">
+    <div class="contact">
+      <h2>Contact</h2>
+	  <form>
+	    <input type="text" name="name" placeholder="Name"><br><br>
+	    <input type="text" name="email" placeholder="Email"><br><br>
+	    <textarea name="message" placeholder="Message Here..."></textarea><br><br>
+	    <input type="submit">
+	  </form>
+    </div>
+  </div>
+  
+<div class="clearfix"></div>
+</section>
+
+<div class="footer">
+  <div class="f-left column middle">
+  <p>Copywright @ 2018</p>
+  </div>
+  <div class="f-right column middle">
+    <p>Created By: <b>Robert Racz</b> | E-mail: <b>asylanas1@gmail.com</b></p>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+  
+</body>
+</html>
